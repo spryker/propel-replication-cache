@@ -22,23 +22,11 @@ class PropelReplicationCacheToStorageRedisClientBridge implements PropelReplicat
         $this->storageRedisClient = $storageRedisClient;
     }
 
-    /**
-     * @param string $key
-     *
-     * @return string|null
-     */
     public function get(string $key): ?string
     {
         return $this->storageRedisClient->get($key);
     }
 
-    /**
-     * @param string $key
-     * @param string $value
-     * @param int|null $expireTTL
-     *
-     * @return bool
-     */
     public function set(string $key, string $value, ?int $expireTTL = null): bool
     {
         return $this->storageRedisClient->set($key, $value, $expireTTL);

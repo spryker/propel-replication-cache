@@ -22,9 +22,6 @@ class PropelReplicationCacheBusinessFactory extends AbstractBusinessFactory
      */
     protected $propelReplicationCacheModel;
 
-    /**
-     * @return \Spryker\Zed\PropelReplicationCache\Business\Model\PropelReplicationCache
-     */
     public function createReplicationCacheModel(): PropelReplicationCache
     {
         if ($this->propelReplicationCacheModel === null) {
@@ -38,9 +35,6 @@ class PropelReplicationCacheBusinessFactory extends AbstractBusinessFactory
         return $this->propelReplicationCacheModel;
     }
 
-    /**
-     * @return \Spryker\Zed\PropelReplicationCache\Dependency\Client\PropelReplicationCacheToStorageRedisClientInterface
-     */
     public function getPropelReplicationCacheClient(): PropelReplicationCacheToStorageRedisClientInterface
     {
         return $this->getProvidedDependency(PropelReplicationCacheDependencyProvider::CLIENT_STORAGE_REDIS);

@@ -26,11 +26,6 @@ class PropelReplicationCache implements PropelReplicationCacheInterface
      */
     protected $cacheTtl;
 
-    /**
-     * @param \Spryker\Zed\PropelReplicationCache\Dependency\Client\PropelReplicationCacheToStorageRedisClientInterface $storageRedisClient
-     * @param bool $isReplicationEnabled
-     * @param int $cacheTtl
-     */
     public function __construct(
         PropelReplicationCacheToStorageRedisClientInterface $storageRedisClient,
         bool $isReplicationEnabled,
